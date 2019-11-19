@@ -32,7 +32,7 @@ queue.listeners.push(respondingService);
 
 dispatcher.onPost('/voice/stream', (req, res) => {
   console.log('POST TwiML');
-  const params = new URLSearchParams(req.body);
+  const params = new URLSegitarchParams(req.body);
   
   const twilioCall = new TwilioCall(
     params.get("AccountSid"), 
